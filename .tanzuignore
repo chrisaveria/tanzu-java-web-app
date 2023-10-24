@@ -13,6 +13,7 @@ target/
 
 ### Gradle ###
 .gradle
+bin/
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
