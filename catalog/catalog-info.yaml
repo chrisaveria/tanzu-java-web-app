@@ -11,6 +11,8 @@ metadata:
     - tanzu
   annotations:
     'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=tanzu-java-web-app'
+    'github.com/project-slug': chrisaveria/tanzu-java-web-app
+    'grafana/dashboard-selector': 'knative-tanzu-java-web-app'
 spec:
   type: service
   lifecycle: experimental
