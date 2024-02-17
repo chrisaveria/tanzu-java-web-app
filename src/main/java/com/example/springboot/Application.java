@@ -7,8 +7,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+
+// CAA - Springboot 3.2 Migration
 import org.springframework.boot.actuate.trace.http.HttpTraceRepository;
 import org.springframework.boot.actuate.trace.http.InMemoryHttpTraceRepository;
+// import org.springframework.boot.actuate.web.exchanges.HttpExchangeRepository;
+// import org.springframework.boot.actuate.web.exchanges.InMemoryHttpExchangeRepository;
 
 @SpringBootApplication
 public class Application {
@@ -32,8 +36,14 @@ public class Application {
 		};
 	}
 	
-    	@Bean
+	// CAA - Springboot 3.2 Migration
+    @Bean
 	public HttpTraceRepository htttpTraceRepository() {
 		return new InMemoryHttpTraceRepository();
 	}
+
+// 	@Bean
+// 	public HttpExchangeRepository createTraceRepository() {
+// 	  return new InMemoryHttpExchangeRepository();
+// 	}
 }
